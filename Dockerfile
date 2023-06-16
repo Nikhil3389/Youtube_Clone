@@ -1,7 +1,7 @@
 FROM ubuntu
 RUN apt-get update
 RUN apt-get -y install apache2
-EXPOSE 80 # Expose port 80 to allow external access
+EXPOSE 80
 RUN service apache2 start
 RUN apt-get -y install git
 RUN git clone https://github.com/Nikhil3389/Youtube_Clone.git app
