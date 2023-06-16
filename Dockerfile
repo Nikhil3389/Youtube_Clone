@@ -5,8 +5,7 @@ EXPOSE 80
 RUN service apache2 start
 RUN apt-get -y install git
 RUN git clone https://github.com/Nikhil3389/Youtube_Clone.git app
-RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-RUN sudo apt install npm
+RUN  apt install npm
 RUN npm install
 RUN npm run build 
 RUN cp -r /app/build /var/www/html/
