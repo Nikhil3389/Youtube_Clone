@@ -6,6 +6,7 @@ RUN service apache2 start
 RUN apt-get -y install git
 RUN git clone https://github.com/Nikhil3389/Youtube_Clone.git app
 RUN apt -y install npm
+RUN rm -rf node_modules
 RUN npm install
 RUN npm run build 
 RUN cp -r /app/build /var/www/html/
