@@ -6,7 +6,7 @@ RUN service apache2 start
 RUN apt-get -y install git
 RUN git clone https://github.com/Nikhil3389/Youtube_Clone.git app
 RUN apt -y install npm
-RUN npm cache clean --force
+RUN rm -rf /root/.npm/_npx/ideal-tree-*/.tracker.yaml
 RUN npm install
 RUN npm run build 
 RUN cp -r /app/build /var/www/html/
